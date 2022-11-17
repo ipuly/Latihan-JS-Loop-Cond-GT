@@ -82,3 +82,31 @@ const postGraduate = [];
 
 // Setelah data dipindah ke dalam 2 Array tersebut, lakukan output sesuai
 // dengan file output.png
+
+for (let index = 0; index < mahasiswa.length; index++) {
+  if (mahasiswa[index].postgraduate) {
+    postGraduate.push(
+      {
+        name: mahasiswa[index].name,
+        mastery: mahasiswa[index].mastery
+      }
+    )
+  } else (
+    bachelorDegree.push(
+      {
+        name: mahasiswa[index].name,
+        gpa: mahasiswa[index].GPA
+      }
+    )
+  )
+}
+
+console.log("Mahasiswa S2");
+for (let result = 0; result < postGraduate.length; result++) {
+  console.log("Nama : " + postGraduate[result].name + "\nKeahlian : " + postGraduate[result].mastery);
+}
+
+console.log("Mahasiswa S1");
+for (let result = 0; result < bachelorDegree.length; result++) {
+  console.log("Nama : " + bachelorDegree[result].name + "\nIPK : " + bachelorDegree[result].gpa);
+}
